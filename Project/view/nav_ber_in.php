@@ -19,7 +19,7 @@
           <th> </th>
           <th><a href="sign_in_investor.php"> Sing In </a></th>
           <th> </th>
-          <th><a href="join_investor.php"> Join </a></th>
+          <th><a href="in_register.php"> Join </a></th>
           <th> </th>
     
         </tr>

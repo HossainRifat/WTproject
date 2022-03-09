@@ -1,8 +1,8 @@
-
+<?php include "in_nav_bar.php" ?>
 <html>
 <body>
-
-<h3>Personal Information 2.2</h3>
+<hr>
+<h3>Personal Information</h3>
 
 <form action="" method="post" enctype="multipart/form-data">
 
@@ -18,8 +18,8 @@
 </tr>
 
 <tr>
-<td>Age:</td>
-<td><input type="number" name="age"></td>
+<td>Date of birth:</td>
+<td><input type="date" name="age"></td>
 </tr>
 
 <tr>
@@ -29,12 +29,12 @@
   <input type="radio" name = "gender" value="r3">Other</td>
 </tr>
 <tr>
-<td>Email:</td>
+<td>Personal email:</td>
 <td><input type="email" name="email"></td>
 </tr>
 <tr>
-<td>Password:</td>
-<td><input type="password" name="pwd"></td>
+<td>Personal address:</td>
+<td><input type="text" name="pAddress"></td>
 </tr>
 <tr>
 <td>Add photo:</td>
@@ -47,3 +47,5 @@
 </table>
 </body>
 </html>
+
+<?php include "../control/in_process_join1.php"?>
