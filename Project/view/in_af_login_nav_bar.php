@@ -5,9 +5,11 @@
     <table>
         <tr>
 
-          <th><a href="home.php"><img src="../img/page_ icon.png" width="200" height="45"></a></th>
+          <th><a href="in_home.php"><img src="../img/page_ icon.png" width="200" height="45"></a></th>
           <th> </th>
-          <th><a href="home.php"> Home </a></th>
+          <th><a href="in_home.php"> Home </a></th>
+          <th> </th>
+          <th><a href="in_profile.php"> Profile </a></th>
           <th> </th>
           <th><a href="about.php"> About </a></th>
           <th> </th>
@@ -17,7 +19,7 @@
           <!-- <th> </th>
           <th><a href="home.php"> Become an Investor </a></th> -->
           <th> </th>
-          <th><a href="in_login.php"> Sing In </a></th>
+          <th><a href="home.php">Logout</a></th>
           <th> </th>
           
     

@@ -28,6 +28,12 @@
   <input type="radio" name = "gender" value="r2">Female
   <input type="radio" name = "gender" value="r3">Other</td>
 </tr>
+
+<tr>
+<td>Phone number:</td>
+<td><input type="tel" id="phone" name="phone" placeholder="01993830224" pattern="[0]{1}[1]{1}[0-9]{9}" required></td>
+</tr>
+
 <tr>
 <td>Personal email:</td>
 <td><input type="email" name="email"></td>
