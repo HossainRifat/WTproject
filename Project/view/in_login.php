@@ -19,7 +19,7 @@
 <td>Password:</td>
 </tr>
 <tr>
-<td><input type="password" name="pAddress"></td>
+<td><input type="password" name="pwd"></td>
 </tr>
 
 <td><input type="submit" value="Submit" name="submit">
@@ -27,9 +27,9 @@
 <input type="reset" name="Reset"></td>
 </tr>
 </table>
-
+<?php include "../control/in_process_login.php"?>
 </center>
 </body>
 </html>
-<?php include "../control/in_process_login.php"?>
+
 

@@ -47,7 +47,7 @@
 <td><input type="file" name="myfile"></td>
 </tr>
 <tr> 
-<td><input type="submit" value="Next" name="next1">
+<td><input type="submit" value="Continue" name="next1">
 <input type="reset" name="Reset"></td>
 </tr>
 </table>

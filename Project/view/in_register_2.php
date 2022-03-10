@@ -18,12 +18,17 @@
 </tr>
 
 <tr>
+<td>Tax identification number:</td>
+  <td><input type="number" name="tin"></td>
+</tr>
+
+<tr>
 <td>Organization address:</td>
   <td><input type="text" name="oaddress"></td>
 </tr>
 
 <tr>
-<td>Established:</td>
+<td>Established date:</td>
 <td><input type="date" name="edate"></td>
 </tr>
 
@@ -35,7 +40,7 @@
 </tr> -->
 <tr>
 <td>Organization email:</td>
-<td><input type="email" name="email"></td>
+<td><input type="email" name="oemail"></td>
 </tr>
 <tr>
 <td>Organization website:</td>
@@ -47,7 +52,7 @@
 </tr> -->
 <tr> 
 <td><input type="submit" value="Previous" name = "previous">
-<input type="submit" value="Next" name="next1">
+<input type="submit" value="Continue" name="next1">
 <input type="reset" name="Reset"></td>
 </td>
 </tr>
