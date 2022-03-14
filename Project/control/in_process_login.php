@@ -63,7 +63,12 @@ if(isset($_POST["submit"])){
             echo "Incorrect email or password.<br>";
         }
         else if($flag == 0){
-            header("location:../control/in_process_cookie.php");
+            if(isset($_POST["remember"])){
+                //session_start();
+                setcookie("autologin",$_SESSION["email"],time()+2*24*60*60,"/","");
+            }
+            header("location:../view/in_home.php");
+            //header("location:../control/in_process_cookie.php");
             // setcookie("autologin",$_POST["email"],time()+2*24*60*60);
         }
     

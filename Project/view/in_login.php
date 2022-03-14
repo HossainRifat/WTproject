@@ -26,6 +26,11 @@
 <tr>
 <td><input type="password" name="pwd"></td>
 </tr>
+<tr>
+    <td>
+        <input type="checkbox" name = "remember"> Remember me.
+    </td>
+</tr>
 
 <td><input type="submit" value="Submit" name="submit">
 
