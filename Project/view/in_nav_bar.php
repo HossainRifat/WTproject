@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if(isset($_SESSION["pwd"])){
+    header("location:in_profile.php");
+}
+?>
 <head>
 <title>BePartner  </title> 
 <head></head>

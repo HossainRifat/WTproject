@@ -1,9 +1,14 @@
-<?php include "in_login_nav_bar.php"?>
+<?php include "in_login_nav_bar.php";
+// if(isset($_SESSION["oname"])){
+//     header("location:../view/in_home.php");
+// }
+?>
 <html>
     <head><title>Login | BePartner</title></head>
 <body>
 <hr>
 <center>
+<img src="../img/title_logo.png" alt="" height="100" width="100">
 <h3>Login</h3>
 
 <form action="" method="post" enctype="multipart/form-data">

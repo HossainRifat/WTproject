@@ -1,8 +1,8 @@
-<!--shawon,sazzadul alam [19-39385-1]-->
+
 
 <html>                                                                                   
 <body>
-
+<?php include "../control/process_home.php"?>
 <?php include "nav_ber_in.php"?>
 <?php include "welcome.php"?>
 

@@ -2,34 +2,36 @@
 <html>
 <body>
 <hr>
-<h3>Profational Information</h3>
+<center>
+<img src="../img/title_logo.png" alt="" height="100" width="100">
+<h3>Profational Information 2/3</h3>
 
 <form action="" method="post">
 
 <table>
 <tr>
 <td>Organization name:</td>
-<td><input type="text" name="oname"></td>
+<td><input type="text" name="oname" value="<?php if(isset($_SESSION["oname"]))echo $_SESSION["oname"]?>"></td>
 </tr>
 
 <tr>
 <td>Organization license:</td>
-  <td><input type="text" name="liname"></td>
+  <td><input type="text" name="liname" value="<?php if(isset($_SESSION["linumber"]))echo $_SESSION["linumber"]?>"></td>
 </tr>
 
 <tr>
 <td>Tax identification number:</td>
-  <td><input type="number" name="tin"></td>
+  <td><input type="number" name="tin" value="<?php if(isset($_SESSION["tin"]))echo $_SESSION["tin"]?>"></td>
 </tr>
 
 <tr>
 <td>Organization address:</td>
-  <td><input type="text" name="oaddress"></td>
+  <td><input type="text" name="oaddress" value="<?php if(isset($_SESSION["oaddress"]))echo $_SESSION["oaddress"]?>"></td>
 </tr>
 
 <tr>
 <td>Established date:</td>
-<td><input type="date" name="edate"></td>
+<td><input type="date" name="edate" value="<?php if(isset($_SESSION["edate"]))echo $_SESSION["edate"]?>"></td>
 </tr>
 
 <!-- <tr>
@@ -40,11 +42,11 @@
 </tr> -->
 <tr>
 <td>Organization email:</td>
-<td><input type="email" name="oemail"></td>
+<td><input type="email" name="oemail" value="<?php if(isset($_SESSION["oemail"]))echo $_SESSION["oemail"]?>"></td>
 </tr>
 <tr>
 <td>Organization website:</td>
-<td><input type="url" name="site"></td>
+<td><input type="text" name="site" value="<?php if(isset($_SESSION["site"]))echo $_SESSION["site"]?>" ></td>
 </tr>
 <tr>
 <!-- <td>Add photo:</td>
@@ -57,6 +59,7 @@
 </td>
 </tr>
 </table>
+</center>
 </body>
 </html>
 <?php include "../control/in_process_join2.php"?>

@@ -2,45 +2,46 @@
 <html>
 <body>
 <hr>
-<h3>Personal Information</h3>
-
+<center>
 <form action="" method="post" enctype="multipart/form-data">
+<img src="../img/title_logo.png" alt="" height="100" width="100">
+<h3>Personal Information 1/3</h3>
 
 <table>
 <tr>
 <td>First Name:</td>
-<td><input type="text" name="fname"></td>
+<td><input type="text" name="fname" value="<?php if(isset($_SESSION["firstName"]))echo $_SESSION["firstName"]?>"></td>
 </tr>
 
 <tr>
 <td>Last name:</td>
-  <td><input type="text" name="lname"></td>
+  <td><input type="text" name="lname" value="<?php if(isset($_SESSION["lastName"]))echo $_SESSION["lastName"]?>"></td>
 </tr>
 
 <tr>
 <td>Date of birth:</td>
-<td><input type="date" name="age"></td>
+<td><input type="date" name="age" value="<?php if(isset($_SESSION["DOB"]))echo $_SESSION["DOB"]?>"></td>
 </tr>
 
 <tr>
   <td>Gender:</td>
-  <td><input type="radio" name = "gender" value="r1">Male
-  <input type="radio" name = "gender" value="r2">Female
-  <input type="radio" name = "gender" value="r3">Other</td>
+  <td><input type="radio" name = "gender" value="r1" <?php if(isset($_SESSION["gender"])){if($_SESSION["gender"]=="Male"){echo"checked";}}?>>Male
+  <input type="radio" name = "gender" value="r2" <?php if(isset($_SESSION["gender"])){if($_SESSION["gender"]=="Female"){echo"checked";}}?> >Female
+  <input type="radio" name = "gender" value="r3" <?php if(isset($_SESSION["gender"])){if($_SESSION["gender"]=="Other"){echo"checked";}}?> >Other</td>
 </tr>
 
 <tr>
 <td>Phone number:</td>
-<td><input type="tel" id="phone" name="phone" placeholder="01993830224" pattern="[0]{1}[1]{1}[0-9]{9}" required></td>
+<td><input type="number" name="phone" placeholder="01993830224" value="<?php if(isset($_SESSION["phone"]))echo $_SESSION["phone"]?>"></td>
 </tr>
 
 <tr>
 <td>Personal email:</td>
-<td><input type="email" name="email"></td>
+<td><input type="email" name="email" value="<?php if(isset($_SESSION["email"]))echo $_SESSION["email"]?>"></td>
 </tr>
 <tr>
 <td>Personal address:</td>
-<td><input type="text" name="pAddress"></td>
+<td><input type="text" name="pAddress" value="<?php if(isset($_SESSION["pAddress"]))echo $_SESSION["pAddress"]?>"></td>
 </tr>
 <tr>
 <td>Add photo:</td>
@@ -51,6 +52,10 @@
 <input type="reset" name="Reset"></td>
 </tr>
 </table>
+<!-- <br>
+<input type="submit" value="Continue" name="next1">
+<input type="reset" name="Reset"> -->
+</center>
 </body>
 </html>
 

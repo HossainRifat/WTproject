@@ -2,7 +2,9 @@
 <html>
 <body>
 <hr>
-<h3>Almost There</h3>
+<center>
+<img src="../img/title_logo.png" alt="" height="100" width="100">
+<h3>Almost There 3/3</h3>
 
 <form action="" method="post">
 
@@ -17,12 +19,20 @@
   <td><input type="password" name="pwd2"></td>
 </tr>
 
+<tr>
+  <td></td>
+  <td><input type="checkbox" name="box1">I am agreed with
+  <a href=""> terms and conditions.</a>
+</td>
+</tr>
+
 <tr> 
 <td><input type="submit" value="Previous" name = "previous">
 <input type="submit" value="Submit" name="submit">
 <input type="reset" name="Reset"></td>
 </tr>
 </table>
+</center>
 </body>
 </html>
 

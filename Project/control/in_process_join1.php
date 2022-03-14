@@ -1,6 +1,4 @@
 <?php
-
-session_start();
 $catagory = "";
 $eflag = 0;
 $pflag = 0;
@@ -47,11 +45,15 @@ if(isset($_POST["next1"])){
         
     }
 
-    if(!isset($_POST["phone"])){
-        echo("Invalid phone.<br>");
-        $error = 1;
-    }
-    else{
+    // $ph = 0;
+    // $ph = strlen($_POST["phone"]);
+    // if(!$ph==11){
+    //     echo("Invalid phone.<br>");
+    //     $error = 1;
+    //     echo "h1";
+    // }
+    if(strlen($_POST["phone"])==11){
+        //echo "h2".$ph;
         $eflag = 0;
         $pflag = 0;
         $data = file_get_contents("../file/in_join_info.json");
@@ -75,6 +77,9 @@ if(isset($_POST["next1"])){
             $error = 1;
         }
     }
+    else{
+        echo "Invalid Phone.<br>";
+    }
 
     $email = $_POST["email"];
     if(empty($email) || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",$email)){
@@ -87,19 +92,37 @@ if(isset($_POST["next1"])){
             $error = 1;
         }
     }
-
-
-
-    
     
     if(empty($_POST["pAddress"])){
         echo"Invalid address.<br>";
         $error = 1;
     }
 
+    $fname ="profile_". $_POST["email"];
+    $name = "../files/".$_FILES["myfile"]["name"];
+    $ext =  pathinfo($_FILES["myfile"]["name"],PATHINFO_EXTENSION);
+    if($ext == "jpg"){
+        
+            if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../img/".$fname.".".$ext)){
+       
+                // echo"file uploaded.SIze: ".filesize($name)."bytes.<br>";
+            }
+            else{
+                echo"Error Photo.<br>";
+                $error = 1;
+            }
+       
+        
+    }
+    else{
+        echo "Only jpg file acceptable.";
+        $error = 1;
+    }
+    
+
     if($error == 0){
-        $_SESSION["lname"] = $_POST["lname"];
-        $_SESSION["fname"] = $_POST["fname"];
+        $_SESSION["lastName"] = $_POST["lname"];
+        $_SESSION["firstName"] = $_POST["fname"];
         $_SESSION["DOB"] = $_POST["age"];
         $_SESSION["gender"] = $catagory;
         $_SESSION["phone"] = $_POST["phone"];
@@ -110,7 +133,6 @@ if(isset($_POST["next1"])){
     else{
         $error = 0;
     }
-   
 
 }
 ?>

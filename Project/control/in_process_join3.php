@@ -1,7 +1,5 @@
 <?php
-
-session_start();
-$catagory = "";
+$error = 0;
 if(isset($_POST["previous"])){
    header("location:in_register_2.php");
 }
@@ -12,20 +10,24 @@ if(isset($_POST["submit"])){
     }
     else{
         if($password == $_POST["pwd2"]){
-            $_SESSION["pwd"] = $password;
+            if(!isset($_POST["box1"])){
+                echo "Check box must be selected.";
+            }
+            else{
+                $_SESSION["pwd"] = $password;
             $formdata = array( 
                 'email'=> $_SESSION["email"],
                 'password'=> $_SESSION["pwd"],
-                'firstName'=> $_SESSION["fname"],
-                'lastName'=> $_SESSION["lname"],
+                'firstName'=> $_SESSION["firstName"],
+                'lastName'=> $_SESSION["lastName"],
                 'DOB' => $_SESSION["DOB"],
                 'gender' => $_SESSION["gender"],
                 'phone' => $_SESSION["phone"],
                 'email' => $_SESSION["email"],
                 'pAddress' => $_SESSION["pAddress"],
 
-                'oname' => $_SESSION["DOB"],
-                'linumber' => $_SESSION["liname"],
+                'oname' => $_SESSION["oname"],
+                'linumber' => $_SESSION["linumber"],
                 'tin' => $_SESSION["tin"],
                 'oaddress' => $_SESSION["oaddress"],
                 'edate' => $_SESSION["edate"],
@@ -40,10 +42,13 @@ if(isset($_POST["submit"])){
          
          //write json data into data.json file
             if(file_put_contents("../file/in_join_info.json", $jsondata)) {
+                setcookie("autologin",$_SESSION["email"],time()+2*24*60*60,"/","");
                 header("location:in_profile.php");
             }
             else 
               echo "Something went wrong";
+            }
+            
                 
         }
         else{
@@ -51,4 +56,8 @@ if(isset($_POST["submit"])){
         }
     }
 }
+else{
+    $error = 0;
+}
+
 ?>
